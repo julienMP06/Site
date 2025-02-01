@@ -9,10 +9,16 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur de la page = 100% de la hauteur de la fenêtre */
 }
 
 .container {
     width: 80%;
+    max-width: 1200px; /* Ajout d'une largeur max pour ne pas dépasser les bords de l'écran */
     margin: 0 auto;
 }
 
@@ -21,17 +27,21 @@ header {
     background-color: #333;
     color: white;
     padding: 40px 0;
+    width: 100%;
+    text-align: center; /* Centrer le texte */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 header .header-content {
     flex: 1;
+    text-align: center;
 }
 
 header h1 {
     font-size: 36px;
+    margin-bottom: 10px;
 }
 
 header p {
@@ -42,12 +52,14 @@ header .header-image img {
     border-radius: 50%;
     width: 120px;
     height: 120px;
+    margin-left: 20px;
 }
 
 /* About Section */
 #about {
     background-color: #ffffff;
     padding: 40px 0;
+    text-align: center; /* Centrer le texte */
 }
 
 #about h2 {
@@ -63,6 +75,8 @@ header .header-image img {
 #projects {
     background-color: #e0e0e0;
     padding: 40px 0;
+    width: 100%;
+    text-align: center; /* Centrer le texte */
 }
 
 #projects h2 {
@@ -75,6 +89,10 @@ header .header-image img {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
+    display: inline-block; /* Aligner les projets horizontalement */
+    width: 45%; /* Largeur des projets */
+    margin-left: 2.5%; /* Ajouter un espace entre les projets */
+    margin-right: 2.5%;
 }
 
 .project h3 {
@@ -96,6 +114,7 @@ header .header-image img {
 #contact {
     background-color: #ffffff;
     padding: 40px 0;
+    text-align: center; /* Centrer le texte */
 }
 
 #contact h2 {
@@ -104,7 +123,7 @@ header .header-image img {
 }
 
 #contact input, #contact textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 10px;
     font-size: 16px;
