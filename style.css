@@ -94,6 +94,28 @@ header p {
     text-decoration: underline;
 }
 
+/* Style pour les icônes sociales */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 32px;
+    color: #333;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #0077b5; /* Couleur LinkedIn */
+}
+
+.social-icon:nth-child(2):hover {
+    color: #333; /* Couleur GitHub */
+}
+
+
 /* Footer */
 footer {
     background-color: #333;
