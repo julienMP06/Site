@@ -130,6 +130,11 @@
         
             sections.forEach(section => observer.observe(section));
         });
-        </script>        
+        </script>      
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                window.scrollTo(0, 0); // Force le scroll tout en haut au chargement
+            });
+        </script>  
 </body>
 </html>
