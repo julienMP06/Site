@@ -25,7 +25,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('fond.jpg'); 
+    background-image: url('pictures/fond.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -221,4 +221,15 @@ footer {
     .timeline-item::before {
         left: 10px; /* Place le point sur la ligne */
     }
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacement entre l'image et le texte */
+}
+
+.company-logo {
+    width: 50px; /* Ajuste la taille du logo */
+    height: auto;
 }
