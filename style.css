@@ -11,6 +11,12 @@ body {
     color: #333;
 }
 
+html, body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100%;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -166,6 +172,16 @@ header .header-image img {
 .show {
     opacity: 1;
     transform: translateY(0);
+}
+
+section {
+    min-height: 100vh; /* Chaque section prend toute la hauteur de l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    scroll-snap-align: start;
 }
 
 /* Footer */
