@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julien Maille-Paez</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Ajout de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts pour une meilleure typographie -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+
     <header>
         <div class="container">
             <div class="header-content">
@@ -24,105 +22,57 @@
                     <a href="https://github.com/julienMP06" target="_blank" class="social-icon">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:julien.maille.006@gmail.com" class="social-icon">
-                        <i class="fas fa-envelope"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- About Section -->
     <section id="about" class="hidden">
         <div class="container">
             <h2>About me</h2>
-            </div>
-    </section>
-
-    <!-- Educational Section -->
-    <section id="My Educational Background" class="hidden">
-        <div class="container">
-            <h2>My educational background</h2>
-            <div class="education">
-                <h3>Master's degree - Data Science</h3>
-                <p>🏫 Université Paris-Saclay</p>
-                <p>📌 Gif-sur-Yvette</p>
-                <p>📅 2023 - 2025</p>
-            </div>
-            <div class="education">
-                <h3>Dual bachelor's degree - Mathematics and Computer Science</h3>
-                <p>🏫 Université Paris-Saclay</p>
-                <p>📌 Gif-sur-Yvette</p>
-                <p>📅 2020 - 2023</p>
-            </div>
-
-            <div class="education">
-                <h3>Baccalaureat in Sciences - Honours (European English Mention)</h3>
-                <p>🏫 Lycée Masséna</p>
-                <p>📌 Nice</p>
-                <p>📅 2017 - 2020</p>
-            </div>
-            <div class="education">
-                <h3>Brevet des collèges - Highest Honours</h3>
-                <p>🏫 Université Paris-Saclay</p>
-                <p>📌 Beaulieu sur mer</p>
-                <p>📅 2017</p>
-            </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="My Professional Experience" class="hidden">
+    <section id="education" class="hidden">
+        <div class="container">
+            <h2>My Educational Background</h2>
+            <p>🏫 Université Paris-Saclay - Data Science (2023 - 2025)</p>
+            <p>🏫 Lycée Masséna - Baccalauréat scientifique (2017 - 2020)</p>
+        </div>
+    </section>
+
+    <section id="experience" class="hidden">
         <div class="container">
             <h2>My Professional Experience</h2>
-            <div class="Experience">
-                <h3>French Riviera Airport Internship - Data Scientist Operational Data  </h3>
-                <p>📌 Nice, France</p>
-                <p>📅 March - August 2025</p>
-            </div>
-            <div class="Experience">
-                <h3>Thales Internship</h3>
-                <p>📌 Gémenos; France</p>
-                <p>📅 May - August 2024</p>
-            </div>
-            <div class="Experience">
-                <h3>LISN (CNRS) Internship</h3>
-                <p>📌 Gif-sur-Yvette</p>
-                <p>📅 May - July 2023</p>
-            </div>
+            <p>📌 Thales Internship - Data Scientist (2024)</p>
+            <p>📌 LISN (CNRS) Internship - Research (2023)</p>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="hidden">
         <div class="container">
             <h2>My Projects</h2>
             <div class="project">
-                <h3>Projet 1 : Analyse de données</h3>
-                <p>Un projet où j'ai utilisé Python pour analyser des données de vente et créer des visualisations interactives. <a href="https://github.com/julienMP06/project1" target="_blank">Voir le projet</a></p>
-                <img src="path/to/project1-image.jpg" alt="Image du projet 1" />
-            </div>
-            <div class="project">
-                <h3>Project 2 : NBA Players Position Prediction</h3>
+                <h3>NBA Players Position Prediction</h3>
                 <p><a href="https://github.com/julienMP06/project2" target="_blank">Voir le projet</a></p>
-                <img src="path/to/project2-image.jpg" alt="Image du projet 2" />
+                <img src="project1.jpg" alt="Image du projet 1" />
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Julien Maille-Paez. Tous droits réservés.</p>
         </div>
     </footer>
-    <!-- <script>
+
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
-                window.scrollTo(0, 0); // Force le scroll tout en haut au chargement
-            });
+            window.scrollTo(0, 0);
+        });
+
         document.addEventListener("DOMContentLoaded", function() {
             const sections = document.querySelectorAll(".hidden");
-        
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -130,9 +80,10 @@
                     }
                 });
             }, { threshold: 0.2 });
-        
+
             sections.forEach(section => observer.observe(section));
         });
-        </script> -->
+    </script>
+
 </body>
 </html>

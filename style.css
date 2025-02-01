@@ -11,31 +11,26 @@ body {
     color: #333;
 }
 
-/* html, body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 90%;
-} */
-
+/* Container global */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
+/* Header */
 header {
-    height: 100vh; /* Prend toute la hauteur de l'écran */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('fond.jpg'); /* Ajoute une image de fond */
+    background-image: url('fond.jpg'); 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Effet parallax */
+    background-attachment: fixed; 
     color: white;
 }
-
 
 .header-content h1 {
     font-size: 50px;
@@ -46,65 +41,44 @@ header {
     font-size: 24px;
 }
 
-
-header .header-content {
-    flex: 1;
-}
-
-header h1 {
-    font-size: 36px;
-}
-
-header p {
-    font-size: 18px;
-}
-
 header .header-image img {
     border-radius: 50%;
     width: 120px;
     height: 120px;
 }
 
-/* About Section */
+/* Sections */
+section {
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    scroll-snap-align: start;
+}
+
+/* About */
 #about {
-    background-color: #ffffff;
+    background-color: white;
+}
+
+/* Experience et Éducation */
+#education, #experience {
+    background-color: #f0f0f0;
     padding: 40px 0;
 }
 
-#about h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-#about p {
-    font-size: 16px;
-}
-
-/* Projects Section */
+/* Projets */
 #projects {
     background-color: #e0e0e0;
-    padding: 40px 0;
-}
-
-#projects h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
 }
 
 .project {
     background-color: white;
-    margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
-}
-
-.project h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.project p {
-    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .project img {
@@ -113,15 +87,9 @@ header .header-image img {
     margin-top: 10px;
 }
 
-/* Contact Section */
+/* Contact */
 #contact {
-    background-color: #ffffff;
-    padding: 40px 0;
-}
-
-#contact h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    background-color: white;
 }
 
 #contact input, #contact textarea {
@@ -146,6 +114,7 @@ header .header-image img {
     background-color: #555;
 }
 
+/* Social Icons */
 .social-icons {
     margin-top: 20px;
 }
@@ -159,13 +128,10 @@ header .header-image img {
 }
 
 .social-icon:hover {
-    color: #0077b5; /* LinkedIn */
+    color: #0077b5;
 }
 
-.social-icon:nth-child(2):hover {
-    color: #333; /* GitHub */
-}
-
+/* Effet d'apparition */
 .hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -175,16 +141,6 @@ header .header-image img {
 .show {
     opacity: 1;
     transform: translateY(0);
-}
-
-section {
-    min-height: 100vh; /* Chaque section prend toute la hauteur de l'écran */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    /* scroll-snap-align: start; */
 }
 
 /* Footer */
