@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -20,8 +20,14 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-content {
+    flex: 1;
 }
 
 header h1 {
@@ -30,6 +36,12 @@ header h1 {
 
 header p {
     font-size: 18px;
+}
+
+header .header-image img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
 }
 
 /* About Section */
@@ -74,6 +86,12 @@ header p {
     font-size: 16px;
 }
 
+.project img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
 /* Contact Section */
 #contact {
     background-color: #ffffff;
@@ -85,21 +103,33 @@ header p {
     margin-bottom: 20px;
 }
 
-#contact a {
-    color: #333;
-    text-decoration: none;
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+#contact button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-/* Style pour les icônes sociales */
-.social-icons {
+#contact button:hover {
+    background-color: #555;
+}
+
+#contact .social-icons {
     margin-top: 20px;
 }
 
-.social-icon {
+#contact .social-icon {
     font-size: 32px;
     color: #333;
     margin-right: 20px;
@@ -107,14 +137,13 @@ header p {
     transition: color 0.3s ease;
 }
 
-.social-icon:hover {
-    color: #0077b5; /* Couleur LinkedIn */
+#contact .social-icon:hover {
+    color: #0077b5; /* LinkedIn */
 }
 
-.social-icon:nth-child(2):hover {
-    color: #333; /* Couleur GitHub */
+#contact .social-icon:nth-child(2):hover {
+    color: #333; /* GitHub */
 }
-
 
 /* Footer */
 footer {
