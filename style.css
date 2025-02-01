@@ -184,7 +184,7 @@ section {
     align-items: center;
     text-align: center;
     padding: 20px;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 /* Footer */
