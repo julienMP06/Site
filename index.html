@@ -117,6 +117,9 @@
         </div>
     </footer>
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+                window.scrollTo(0, 0); // Force le scroll tout en haut au chargement
+            });
         document.addEventListener("DOMContentLoaded", function() {
             const sections = document.querySelectorAll(".hidden");
         
@@ -130,11 +133,6 @@
         
             sections.forEach(section => observer.observe(section));
         });
-        </script>      
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                window.scrollTo(0, 0); // Force le scroll tout en haut au chargement
-            });
-        </script>  
+        </script>
 </body>
 </html>
