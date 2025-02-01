@@ -11,11 +11,11 @@ body {
     color: #333;
 }
 
-html, body {
+/* html, body {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 90%;
-}
+} */
 
 .container {
     width: 80%;
