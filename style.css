@@ -224,12 +224,12 @@ footer {
 }
 
 .company-info {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacement entre l'image et le texte */
+    display: block; /* Cela aligne les éléments verticalement */
+    margin-top: 10px; /* Espacement entre les éléments */
 }
 
 .company-logo {
-    width: 50px; /* Ajuste la taille du logo */
+    width: 75px; /* Ajuste la taille du logo */
     height: auto;
+    margin-bottom: 10px; /* Espacement sous le logo */
 }
