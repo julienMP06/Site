@@ -16,15 +16,27 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Pleine hauteur de l'écran */
+    background: url('ton-image.jpg') no-repeat center center/cover;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    color: white;
 }
+
+.header-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.header-content p {
+    font-size: 24px;
+}
+
 
 header .header-content {
     flex: 1;
@@ -143,6 +155,17 @@ header .header-image img {
 
 #contact .social-icon:nth-child(2):hover {
     color: #333; /* GitHub */
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer */

@@ -22,7 +22,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="hidden">
         <div class="container">
             <h2>About me</h2>
             <p>Passionate about data and innovation, I'm looking to join a dynamic company to solve complex problems using AI and Machine Learning. With experience at the Côte d'Azur Airport and an entrepreneurial approach (student-entrepreneur status), I'm looking for a Data Scientist position (fixed-term, permanent or VIE) from September 2025.</p>
@@ -30,7 +30,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="hidden">
         <div class="container">
             <h2>Contact</h2>
             <p>You can contact me at <a href="mailto:julien.maille.006@gmail.com">julien.maille.006@gmail.com</a></p>
@@ -48,7 +48,7 @@
     </section>
 
     <!-- Educational Section -->
-    <section id="My Educational Background">
+    <section id="My Educational Background" class="hidden">
         <div class="container">
             <h2>My educational background</h2>
             <div class="education">
@@ -80,7 +80,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="My Professional Experience">
+    <section id="My Professional Experience" class="hidden">
         <div class="container">
             <h2>My educational background</h2>
             <div class="Experience">
@@ -108,7 +108,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="hidden">
         <div class="container">
             <h2>My Projects</h2>
             <div class="project">
@@ -130,5 +130,20 @@
             <p>&copy; 2025 Julien Maille-Paez. Tous droits réservés.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".hidden");
+        
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.2 });
+        
+            sections.forEach(section => observer.observe(section));
+        });
+        </script>        
 </body>
 </html>
