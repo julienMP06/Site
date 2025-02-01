@@ -143,11 +143,11 @@ header .header-image img {
     background-color: #555;
 }
 
-#contact .social-icons {
+.social-icons {
     margin-top: 20px;
 }
 
-#contact .social-icon {
+.social-icon {
     font-size: 32px;
     color: #333;
     margin-right: 20px;
@@ -155,11 +155,11 @@ header .header-image img {
     transition: color 0.3s ease;
 }
 
-#contact .social-icon:hover {
+.social-icon:hover {
     color: #0077b5; /* LinkedIn */
 }
 
-#contact .social-icon:nth-child(2):hover {
+.social-icon:nth-child(2):hover {
     color: #333; /* GitHub */
 }
 
