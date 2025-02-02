@@ -286,6 +286,13 @@ footer {
     position: relative;
 }
 
+/* Image de la carte */
+.card img {
+    width: 100%;
+    height: 200px; /* Ajuste cette valeur selon la taille que tu veux */
+    object-fit: cover; /* L'image va couvrir la zone de l'élément */
+}
+
 /* Contenu caché par défaut */
 .hidden-content {
     max-height: 0;
