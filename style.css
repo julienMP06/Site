@@ -314,4 +314,14 @@ footer {
     padding-top: 10px;
 }
 
+.github-icon {
+    font-size: 40px; /* Taille de l'icône Discord */
+    color: #000000; /* Optionnel, pour colorier l'icône Discord */
+}
 
+/* Section Competitions - Logo ajusté */
+#competitions .competition-logo {
+    width: 200px; /* Ajuste la taille du logo pour cette section */
+    height: auto;
+    margin-bottom: 10px;
+}
