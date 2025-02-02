@@ -118,12 +118,12 @@ section {
 
 /* Social Icons */
 .social-icons {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .social-icon {
     font-size: 32px;
-    color: #333;
+    color: #ffffff;
     margin-right: 20px;
     text-decoration: none;
     transition: color 0.3s ease;
