@@ -130,25 +130,37 @@
     <section id="competitions" class="hidden">
         <div class="container">
             <h2>Competitions & Entrepreneurship</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Statut National d'Étudiant-Entrepreneur</h3>
-                        <p>📅 2024</p>
-                        <p>Programme dédié aux étudiants entrepreneurs. Accompagnement par des experts et développement d’un projet innovant.</p>
+            <div class="cards-container">
+                <div class="card snee-card">
+                    <h3>Statut National d'Étudiant-Entrepreneur</h3>
+                    <img src="pictures/peips.png" alt="Peips Logo" class="company-logo">
+                    <p>📅 2025</p>
+                    <p>Programme dédié aux étudiants entrepreneurs.</p>
+                    
+                    <!-- Détails cachés -->
+                    <div class="hidden-content">
+                        <ul>
+                            <li>Accès à un espace de coworking</li>
+                            <li>Accompagnement par des experts</li>
+                            <li>Programme de formation dédié</li>
+                            <li>Possibilité de substituer son stage par son projet</li>
+                        </ul>
+                        <p>📅 Année : 2025</p>
+                        <p>🔗 <a href="https://www.pepite-france.fr/" target="_blank">En savoir plus</a></p>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Olympiades de Physique France</h3>
-                        <p>📅 Année de participation</p>
-                        <p>Concours national combinant expérimentation et rigueur scientifique. Travail en équipe et présentation devant un jury d’experts.</p>
-                    </div>
+                </div>                
+                <div class="card">
+                    <h3>Olympiades de Physique France</h3>
+                    <img src="pictures/ODP.png" alt="ODP Logo" class="company-logo">
+                    <p>📅 2019</p>
+                    <p>Concours national combinant expérimentation et rigueur scientifique. Travail en équipe et présentation devant un jury d’experts.</p>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
+       
 
+ 
     <section id="projects" class="hidden">
         <div class="container">
             <h2>My Projects</h2>
@@ -184,6 +196,16 @@
             sections.forEach(section => observer.observe(section));
         });
     </script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sneeCard = document.querySelector(".snee-card");
+    
+            sneeCard.addEventListener("click", function() {
+                // Basculer la classe "active" pour agrandir/réduire la carte
+                sneeCard.classList.toggle("active");
+            });
+        });
+    </script>
+    
 </body>
 </html>
