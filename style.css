@@ -298,7 +298,8 @@ footer {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.3s ease;
+    padding: 0 0; /* pas de padding quand c'est fermé */
 }
 
 /* Quand la carte est active (ouverte) */
@@ -309,9 +310,9 @@ footer {
 
 /* Afficher le contenu quand la carte est active */
 .card.active .hidden-content {
-    max-height: 500px; /* Valeur assez grande pour afficher le contenu */
+    max-height: 1000px; /* valeur très grande mais safe, juste pour transition */
     opacity: 1;
-    padding-top: 10px;
+    padding: 10px 0; /* padding quand ouvert */
 }
 
 .github-icon {

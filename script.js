@@ -34,16 +34,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     cards.forEach(card => {
         card.addEventListener('click', (e) => {
-            // Empêche l'ouverture si on clique sur un lien ou une icône dans la carte
-            if (
-                e.target.tagName.toLowerCase() === 'a' ||
-                e.target.closest('a') // si l'élément cliqué est à l'intérieur d'un lien
-            ) {
-                return; 
-            }
+            // Ignorer le clic sur un lien
+            if (e.target.tagName.toLowerCase() === 'a' || e.target.closest('a')) return;
 
-            // Bascule l'état actif uniquement sur la carte cliquée
+            // Toggle uniquement la carte cliquée
             card.classList.toggle('active');
         });
     });
 });
+
