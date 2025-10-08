@@ -327,6 +327,6 @@ footer {
     margin-bottom: 10px;
 }
 
-.justified {
-    text-align: justify;
+.company-info p.justified {
+    text-align: justify !important;
 }
