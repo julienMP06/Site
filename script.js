@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => observer.observe(section));
 });
 
+// Interaction pour la carte .snee-card (si elle existe)
 document.addEventListener("DOMContentLoaded", function() {
     const sneeCard = document.querySelector(".snee-card");
 
-    // Vérifie si la carte existe
     if (sneeCard) {
         sneeCard.addEventListener("click", function() {
             sneeCard.classList.toggle("active");
@@ -28,11 +28,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// Interaction pour les cartes de projet (solution 2 : indépendantes)
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.card');
 
-// Interaction pour les cartes de projet (si nécessaire)
-const cards = document.querySelectorAll('.card');
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('active');
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Empêche l'ouverture si on clique sur un lien ou une icône dans la carte
+            if (
+                e.target.tagName.toLowerCase() === 'a' ||
+                e.target.closest('a') // si l'élément cliqué est à l'intérieur d'un lien
+            ) {
+                return; 
+            }
+
+            // Bascule l'état actif uniquement sur la carte cliquée
+            card.classList.toggle('active');
+        });
     });
 });
