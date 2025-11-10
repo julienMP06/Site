@@ -6,13 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
 // Intersection Observer pour afficher les sections au scroll
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".hidden");
+
+    // Si l'écran est petit, on montre directement les sections
+    if (window.innerWidth < 768) {
+        sections.forEach(section => section.classList.add("show"));
+        return; // on sort, inutile d'initialiser l'observer
+    }
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
+                observer.unobserve(entry.target); // évite de re-checker
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
     sections.forEach(section => observer.observe(section));
 });
@@ -28,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// 🔹 Nouveau : ouverture des cartes de projet dans un modal
+// 🔹 Ouverture des cartes de projet dans un modal
 document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("projectModal");
     const modalTitle = document.getElementById("modalTitle");
@@ -70,7 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Fermer le modal
-    closeBtn.addEventListener("click", () => modal.style.display = "none");
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => modal.style.display = "none");
+    }
 
     // Fermer si clic en dehors
     window.addEventListener("click", (e) => {
