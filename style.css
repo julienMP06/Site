@@ -121,7 +121,7 @@ section {
 
 /* Social Icons */
 .social-icons {
-    margin-top: 40px;
+    margin-top: auto;
 }
 
 .social-icon {
@@ -250,9 +250,12 @@ footer {
 
 /* Style de chaque carte */
 .card {
+    display: flex;
     background: #fff;
     padding: 20px;
     width: 300px;
+    flex-direction: column; /* Empile verticalement */
+    justify-content: flex-start; /* par défaut, le contenu commence en haut */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -268,6 +271,7 @@ footer {
 /* Titre des cartes */
 .card h3 {
     font-size: 1.2em;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -498,21 +502,20 @@ footer {
     transform: scale(1.1);
 }
 
-.social-icons {
-    /* Taille des icônes */
-    font-size: 4rem;
-    margin-top: 10px;
+.social-icons2 {
+    font-size: 32px;
+    margin-top: auto;
     display: flex;
     justify-content: center; /* centre horizontalement */
     gap: 15px; /* espace entre les icônes */
 }
 
-.social-icons a {
+.social-icons2 a {
     color: #000000;
     font-size: 1.5rem;
     transition: color 0.3s;
 }
 
-.social-icons a:hover {
+.social-icons2 a:hover {
     color: #0073b1;
 }
