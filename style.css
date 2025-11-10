@@ -287,6 +287,10 @@ footer {
     cursor: pointer;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* espace entre haut et bas */
+    position: relative;
 }
 
 /* Image de la carte */
@@ -332,6 +336,10 @@ footer {
 }
 
 .company-info p.justified {
+    text-align: justify !important;
+}
+
+.card p.justified {
     text-align: justify !important;
 }
 
@@ -493,7 +501,7 @@ footer {
 
 .social-icons2 {
     font-size: 32px;
-    margin-top: auto;
+    margin-top: auto !important;
     display: flex;
     justify-content: center; /* centre horizontalement */
     gap: 15px; /* espace entre les icônes */
