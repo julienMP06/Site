@@ -28,29 +28,63 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Interaction pour les cartes de projet (solution 2 : indépendantes)
+// 🔹 Nouveau : ouverture des cartes de projet dans un modal
 document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('.card');
+    const modal = document.getElementById("projectModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalImage = document.getElementById("modalImage");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalLink = document.getElementById("modalLink");
+    const closeBtn = document.querySelector(".modal .close");
+
+    const cards = document.querySelectorAll("#projects .card");
 
     cards.forEach(card => {
-        card.addEventListener('click', (e) => {
+        card.addEventListener("click", (e) => {
             // Ignorer le clic sur un lien
             if (e.target.tagName.toLowerCase() === 'a' || e.target.closest('a')) return;
 
-            // Toggle uniquement la carte cliquée
-            card.classList.toggle('active');
+            modal.style.display = "flex";
+            modalTitle.textContent = card.querySelector("h3").textContent;
+
+            const img = card.querySelector("img");
+            modalImage.src = img ? img.src : "";
+
+            // Prendre le contenu caché si présent sinon la description courte
+            const hiddenContent = card.querySelector(".hidden-content");
+            if (hiddenContent && hiddenContent.innerHTML.trim() !== "") {
+                modalDescription.innerHTML = hiddenContent.innerHTML;
+            } else {
+                const shortDesc = card.querySelector("p");
+                modalDescription.textContent = shortDesc ? shortDesc.textContent : "";
+            }
+
+            const link = card.querySelector("a");
+            if(link) {
+                modalLink.href = link.href;
+                modalLink.style.display = "inline-block";
+            } else {
+                modalLink.style.display = "none";
+            }
         });
+    });
+
+    // Fermer le modal
+    closeBtn.addEventListener("click", () => modal.style.display = "none");
+
+    // Fermer si clic en dehors
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
     });
 });
 
-// 🔍 Nouveau : Filtrage des projets par catégorie
+// 🔍 Filtrage des projets par catégorie
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('#projects .card');
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            // Active visuellement le bouton cliqué
             buttons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
