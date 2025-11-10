@@ -508,11 +508,11 @@ footer {
 }
 
 .social-icons2 a {
-    color: #000000;
-    font-size: 1.5rem;
-    transition: color 0.3s;
+  color: #000000;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons2 a:hover {
-    color: #0073b1;
+  color: #0077ff;
+  transform: scale(1.1);
 }
