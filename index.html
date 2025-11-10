@@ -46,6 +46,14 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
+                        <h3>National Student Entrepreneur Status</h3>
+                        <p>🏫 Pépite PEIPS</p>
+                        <p>📅 2025 - 2025</p>
+                        <p>Recognition of entrepreneurial skills and support for project development</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
                         <h3>Master's degree - Data Science - English courses</h3>
                         <p>🏫 Université Paris-Saclay</p>
                         <p>📌 Gif-sur-Yvette</p>
@@ -163,8 +171,8 @@
     <section id="competitions" class="hidden">
         <div class="container">
             <h2>Competitions & Entrepreneurship</h2>
-            <div class="cards-container">
-                <div class="card snee-card">
+            <div class="competitions-container">
+                <div class="competition-card snee-card">
                     <h3>National Student-Entrepreneur Status (SNEE)</h3>
                     <img src="pictures/peips.png" alt="Peips Logo" class="competition-logo">
                     <p>📅 2025</p>
@@ -179,24 +187,47 @@
                         <p>🔗 <a href="https://www.pepite-france.fr/" target="_blank">En savoir plus</a></p>
                     </div>
                 </div>                
-                <div class="card">
+                <div class="competition-card">
                     <h3>Physics Olympiad</h3>
                     <img src="pictures/ODP.png" alt="ODP Logo" class="competition-logo">
                     <p>📅 2019</p>
                     <p>Second place Physics Olympiad</p>
-
                 </div>
             </div>
         </div>
     </section>
        
     <section id="projects" class="hidden">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="data-science">Data Science</button>
+            <button class="filter-btn" data-filter="software">Software</button>
+            <button class="filter-btn" data-filter="full-stack">Full Stack</button>
+            <button class="filter-btn" data-filter="entrepreneurship">Entrepreneurship</button>
+            <button class="filter-btn" data-filter="IOT">Internet Of Things</button>
+            <button class="filter-btn" data-filter="video-games">Video Games</button>
+        </div>
+
         <div class="container">
             <h2>My Projects</h2>
             <div class="cards-container">
                 
+                <div class="card" data-category="full-stack">
+                    <img src="pictures/Projects/SeaScape.jpg" alt="Boat Booking Platform" />
+                    <h3>Boat Booking Platform</h3>
+                    <p>Web platform for booking and renting boats between individuals and professionals, with search, booking management and a modern, responsive interface.</p>
+                    <div class="hidden-content">
+                        <p>SeaScape is a comprehensive web application that allows individuals and professionals to book, rent and list boats.The aim of the project is to offer a smooth, secure and intuitive experience for exploring, comparing and booking boats according to various criteria.🔧 Main features:Dynamic catalogue of boats with filters by type (sailboat, yacht, catamaran, etc.), location, availability and price.Online booking system including date selection, availability check and rental confirmation.User area for managing bookings, tracking payments and publishing rental ads.Administrator page (optional depending on your implementation) for managing boats, users and transactions.Modern and responsive interface, designed for smooth navigation on desktop and mobile.💡 Objectives and learning:The project focuses on the design of a complete web architecture, including the management of a relational database and the implementation of a consistent front-back logic.It illustrates my ability to design an end-to-end web solution, from data modelling to user experience.
+
+                        </p>                        
+                        </div>
+                        <a href="https://github.com/julienMP06/NBA-Prediction-1" target="_blank">
+                            <i class="fab fa-github github-icon"></i>
+                        </a>
+                </div>
+
                 <!-- Carte 1 -->
-                <div class="card">
+                <div class="card" data-category="data-science">
                     <img src="pictures/Projects/NBA.png" alt="NBA Players Position Prediction" />
                     <h3>NBA Players Position Prediction 2 (largest dataset)</h3>
                     <p>This project explores NBA data using data science techniques to uncover insights about player performance, team statistics, and trends over time. The analysis was conducted using Python, leveraging libraries such as Pandas, Matplotlib, and Seaborn for data manipulation and visualization.</p>
@@ -221,9 +252,9 @@
                         <a href="https://github.com/julienMP06/NBA_Data-Analysis-" target="_blank">
                             <i class="fab fa-github github-icon"></i>
                         </a>
-                    </div>
+                </div>
                     
-                    <div class="card">
+                <div class="card" data-category="data-science">
                         <img src="pictures/Projects/NBA1.png" alt="NBA Players Position Prediction" />
                         <h3>NBA Players Position Prediction 1</h3>
                         <p>This project explores NBA data using data science techniques to uncover insights about player performance, team statistics, and trends over time. The analysis was conducted using Python, leveraging libraries such as Pandas, Matplotlib, and Seaborn for data manipulation and visualization.</p>
@@ -250,7 +281,7 @@
                             </a>
                 </div>
                         
-                <div class="card">
+                <div class="card" data-category="data-science">
                         <img src="pictures/Projects/WOD.png" alt="NBA Players Position Prediction" />
                         <h3>Geospatial analysis of ski resorts</h3>
                         <p>Design of a Knowledge Graph linking ski resorts to airports located within a 100 km radius. Extraction, cleaning and geocoding of data, then querying the graph via SPARQL to visualise correspondences. (Python / GeoPandas / RDFLib / SPARQL / Wikidata)</p>
@@ -263,7 +294,7 @@
                                 <i class="fab fa-github github-icon"></i>
                             </a>
                 </div>
-                <div class="card">
+                <div class="card" data-category="data-science">
                     <img src="pictures/Projects/volcan.webp" alt="Project 3" />
                     <h3>Datacamp <a href="https://www.telecom-sudparis.eu" target="_blank">Telecom SudParis</a> VolcanicPrediction (Rank 17/180)</h3>
                     <p>This project, developed as part of a DataCamp course, focuses on predicting volcanic eruptions using machine learning techniques. The goal is to analyze seismic and geophysical data to identify patterns that could help anticipate eruptions.</p>
@@ -291,7 +322,7 @@
                     </a>
                 </div>
                         <!-- Carte 2 -->
-                <div class="card">
+                <div class="card" data-category="data-science">
                     <img src="pictures/Projects/TER.png" alt="Project 2" />
                     <h3>Stochastic Simulation</h3>
                     <p>This project is carried out as part of the first-year TER (Research Project) of the Master's in Data Science at Paris-Saclay University. The aim is to conduct a stochastic simulation of the evolution of chemical reactions involving enzymes and substrates.</p>
@@ -303,7 +334,7 @@
                             <i class="fab fa-github github-icon"></i>
                         </a>
                 </div>
-                <div class="card">
+                <div class="card" data-category="IOT">
                     <img src="pictures/Projects/rasptank.jpg" alt="Project 3" />
                     <h3>RapsTank Battle</h3>
                     <p>This project focuses on network programming using the MQTT (Message Queuing Telemetry Transport) protocol, a lightweight messaging protocol widely used for IoT and real-time communication. The goal was to implement a publisher-subscriber architecture to enable efficient data exchange between devices.</p>
@@ -330,7 +361,7 @@
                     </a>
                 </div>
 
-                <div class="card">
+                <div class="card" data-category="full-stack">
                     <img src="pictures/Projects/Dashboard1.png" alt="Project 3" />
                     <h3>Dashboard for student grades</h3>
                     <p>Design of a JupyterLab extension allowing students to view their marks, averages, practical results and revisions via an interactive dashboard. Python / JavaScript / GitLab / JupyterLab </p>
@@ -338,7 +369,7 @@
                         <p></p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-category="data-science">
                     <img src="pictures/Projects/bioinfo.png" alt="Project 3" />
                     <h3>Bio informatics</h3>
                     <p> </p>
@@ -350,7 +381,7 @@
                     </a>
                 </div>
                 <!-- Carte 3 -->
-                <div class="card">
+                <div class="card" data-category="video-games">
                     <img src="pictures/Projects/ileinterdite.png" alt="Project 3" />
                     <h3>Forbidden island game</h3>
                     <p> </p>
@@ -361,7 +392,7 @@
                         <i class="fab fa-github github-icon"></i>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card" data-category="video-games">
                     <img src="pictures/Projects/fur.png" alt="Project 3" />
                     <h3>Vector generation of fur</h3>
                     <p> </p>
@@ -372,7 +403,7 @@
                         <i class="fab fa-github github-icon"></i>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card" data-category="software">
                     <img src="pictures/Projects/simants.png" alt="Project 3" />
                     <h3>Ants Simulation</h3>
                     <p> </p>
@@ -383,7 +414,7 @@
                         <i class="fab fa-github github-icon"></i>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card" data-category="software">
                     <img src="pictures/Projects/dessin.png" alt="Project 3" />
                     <h3>Drawing App</h3>
                     <p> </p>
@@ -394,7 +425,7 @@
                         <i class="fab fa-github github-icon"></i>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card" data-category="software">
                     <img src="pictures/Projects/discord.png" alt="Project 3" />
                     <h3>Discord Bot
                     </h3>
@@ -403,7 +434,7 @@
                         <p> </p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-category="video-games">
                     <img src="pictures/Projects/puyo.png" alt="Project 3" />
                     <h3>Puyo Puyo</h3>
                     <p> </p>
@@ -414,7 +445,7 @@
                         <i class="fab fa-github github-icon"></i>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card" data-category="video-games">
                     <img src="pictures/Projects/Human.png" alt="Project 3" />
                     <h3>Human body management simulation game</h3>
                     <p> </p>
@@ -422,7 +453,7 @@
                         <p> </p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-category="video-games">
                     <img src="pictures/Projects/CITY.png" alt="Project 3" />
                     <h3>City management simulation game</h3>
                     <p> </p>
@@ -436,7 +467,7 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2025 Julien Maille-Paez. Tous droits réservés.</p>
+            <p>&copy; 2025 Julien Maille-Paez. All rights reserved.</p>
         </div>
     </footer>
 
