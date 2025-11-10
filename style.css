@@ -497,3 +497,22 @@ footer {
 .skills span:hover {
     transform: scale(1.1);
 }
+
+.social-icons {
+    /* Taille des icônes */
+    font-size: 4rem;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    gap: 15px; /* espace entre les icônes */
+}
+
+.social-icons a {
+    color: #000000;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0073b1;
+}
