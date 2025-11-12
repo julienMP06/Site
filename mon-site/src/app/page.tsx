@@ -550,6 +550,25 @@ export default function HomePage() {
                 </div>
               </div>
 
+              <div className="card" data-category="full-stack">
+                <img src="pictures/Projects/portfolio.webp" loading="lazy" alt="Portfolio" />
+                <h3>Altair Gym</h3>
+                <p className="justified">
+                  My Portfolio, this website built with Next.js and deployed on Vercel. Showcasing my projects, skills, and experiences in a modern, responsive design.
+                </p>
+                <div className="hidden-content"></div>
+                <div className="skills">
+                  <span>React</span>
+                  <span>JS</span>
+                  <span>Vercel</span>
+                </div>
+                <div className="social-icons2">
+                  <a href="https://github.com/julienMP06/Site/tree/main" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-github github-icon"></i>
+                  </a>
+                </div>
+              </div>
+
               {/* Card 7 */}
               <div className="card" data-category="data-science">
                 <img src="pictures/Projects/volcan.webp" loading="lazy" alt="Datacamp VolcanicPrediction" />
@@ -833,9 +852,9 @@ export default function HomePage() {
           <h3 id="modalTitle"></h3>
           <img id="modalImage" alt="Project Image" />
           <p id="modalDescription"></p>
-          <a id="modalLink" href="#" target="_blank">
+          {/* <a id="modalLink" href="#" target="_blank">
             <i className="fab fa-github github-icon"></i>
-          </a>
+          </a> */}
         </div>
       </div>
     </>
