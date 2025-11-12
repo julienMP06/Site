@@ -552,7 +552,7 @@ export default function HomePage() {
 
               <div className="card" data-category="full-stack">
                 <img src="pictures/Projects/portfolio.webp" loading="lazy" alt="Portfolio" />
-                <h3>Altair Gym</h3>
+                <h3>Portfolio</h3>
                 <p className="justified">
                   My Portfolio, this website built with Next.js and deployed on Vercel. Showcasing my projects, skills, and experiences in a modern, responsive design.
                 </p>
@@ -563,7 +563,7 @@ export default function HomePage() {
                   <span>Vercel</span>
                 </div>
                 <div className="social-icons2">
-                  <a href="https://github.com/julienMP06/Site/tree/main" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/julienMP06/Site" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-github github-icon"></i>
                   </a>
                 </div>
