@@ -558,7 +558,7 @@ export default function HomePage() {
                 </p>
                 <div className="hidden-content"></div>
                 <div className="skills">
-                  <span>React</span>
+                  <span>Next.js</span>
                   <span>JS</span>
                   <span>Vercel</span>
                 </div>
