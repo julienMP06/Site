@@ -266,6 +266,32 @@ export default function HomePage() {
                 </div>
               </div>
 
+              <div className="timeline-item">
+                <div className="timeline-content">
+                  <h3>Co-founder & Full-stack Data Science Engineer</h3>
+                  <div className="company-info">
+                    <p>🏫 Altair Gym</p>
+                    <p>📌 Nice, France</p>
+                    <p>📅 May 2024 - December 2025</p>
+                    <p><br/></p>
+                    <p className="justified">
+                      🔍 Co-founder of Altair Gym alongside Manitas Bahri, an innovative app and connected device for strength training, designed to track progress and analyse movements in real time. The project combines a mobile app, a connected wristband and data analysis to offer users a comprehensive experience.
+                      Altair Gym was awarded the 2025 Île-de-France Regional Pépite Prize.
+                    </p>
+                  </div>
+                  <div className="skills">
+                    <span>Python</span>
+                    <span>ML</span>
+                    <span>AWS Quicksight</span>
+                    <span>AWS Athena</span>
+                    <span>AWS SageMaker</span>
+                    <span>AWS S3</span>
+                    <span>SQL</span>
+                    <span>JupyterLab</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Timeline item 2 */}
               <div className="timeline-item">
                 <div className="timeline-content">
