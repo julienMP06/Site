@@ -34,6 +34,12 @@ header {
     color: white;
 }
 
+.sql-block {
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+}
+
 .header-content h1 {
     font-size: 50px;
     font-weight: bold;
