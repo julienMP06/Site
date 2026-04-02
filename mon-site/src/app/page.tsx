@@ -240,31 +240,84 @@ export default function HomePage() {
             <div className="timeline">
 
               {/* Timeline item 1 */}
-              <div className="timeline-item">
-                <div className="timeline-content">
-                  <h3>French Riviera Airport Internship - Data Scientist Operational Data</h3>
-                  <div className="company-info">
-                    <img src="pictures/aeroport.webp" loading="lazy" alt="French Riviera Airport Logo" className="company-logo" />
-                    <p>🏫 French Riviera Airport</p>
-                    <p>📌 Nice, France</p>
-                    <p>📅 March - August 2025</p>
-                    <p><br/></p>
-                    <p className="justified">
-                      🔍 Participation in Data Science projects applied to airport operations. Integration, quality control and analysis of operational data in a Lakehouse environment on AWS. Contribution to the development of KPIs and creation of four strategic dashboards via AWS Quicksight, providing management teams with decision-making tools. Supported the design of operational forecasting models (ML), adapted their deployment in a business context (MLops) and produced operational analyses to aid decision-making.
-                    </p>
-                  </div>
-                  <div className="skills">
-                    <span>Python</span>
-                    <span>ML</span>
-                    <span>AWS Quicksight</span>
-                    <span>AWS Athena</span>
-                    <span>AWS SageMaker</span>
-                    <span>AWS S3</span>
-                    <span>SQL</span>
-                    <span>JupyterLab</span>
-                  </div>
+             <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>French Riviera Airport Internship - Data Scientist Operational Data</h3>
+                <div className="company-info">
+                  <img src="pictures/aeroport.webp" loading="lazy" alt="French Riviera Airport Logo" className="company-logo" />
+                  <p>🏫 French Riviera Airport</p>
+                  <p>📌 Nice, France</p>
+                  <p>📅 March - August 2025</p>
+                  <p><br/></p>
+                  <p className="justified">
+                    🔍 Participation in Data Science projects applied to airport operations. Integration, quality control and analysis of operational data in a Lakehouse environment on AWS. Contribution to the development of KPIs and creation of four strategic dashboards via AWS Quicksight, providing management teams with decision-making tools. Supported the design of operational forecasting models (ML), adapted their deployment in a business context (MLops) and produced operational analyses to aid decision-making.
+                  </p>
+                </div>
+
+                {/* SQL Code Sample */}
+                <div style={{ marginTop: "1.5rem" }}>
+                  <p style={{ fontWeight: 500, marginBottom: "0.5rem" }}>📄 SQL Sample — PAF Passenger Flow Analysis (AWS Athena)</p>
+                  <pre style={{
+                    background: "#1e1e2e",
+                    color: "#cdd6f4",
+                    borderRadius: "8px",
+                    padding: "1rem",
+                    fontSize: "0.75rem",
+                    overflowX: "auto",
+                    lineHeight: "1.6",
+                    border: "1px solid #313244"
+                  }}>
+                    <code>{`-- Zone reference system (aubettes and eGates)
+            WITH xovis_referentiel AS (
+                SELECT * FROM (VALUES
+                    (1, 'T1D_main_paf', 'T1D_PAF', 'T1'),
+                    (2, 'T1A_global',   'T1A_PAF', 'T1'),
+                    (3, 'T2D_paf',      'T2D_PAF', 'T2'),
+                    (4, 'T2A_main',     'T2A_PAF', 'T2'),
+                    (5, 'T23D_PAF',     'T23D_PAF','T2')
+                ) AS t(id_place, lib_place, nom_zone, terminal)
+            ),
+            -- Joining Xovis data with the reference system
+            liaison AS (
+                SELECT x.date, xr.nom_zone, xr.terminal,
+                      x.itemname, x.forwexits, x.waiting_time
+                FROM xovis_table x
+                LEFT JOIN xovis_referentiel xr ON x.id_place = xr.id_place
+            ),
+            -- Consolidating waiting times (avg + P95)
+            attente AS (
+                SELECT date, nom_zone, terminal,
+                      AVG(waiting_time)  AS temps_attente_moyen,
+                      PERCENTILE_CONT(0.95) WITHIN GROUP
+                          (ORDER BY waiting_time) AS temps_attente_p95
+                FROM liaison
+                GROUP BY date, nom_zone, terminal
+            )
+            -- Final output for AWS QuickSight dashboards
+            SELECT d.date, d.nom_zone, d.terminal,
+                  d.total_desks, e.total_egates,
+                  (d.total_desks + e.total_egates) AS total_passagers,
+                  a.temps_attente_moyen,
+                  a.temps_attente_p95
+            FROM desks d
+            LEFT JOIN egates  e ON d.date = e.date AND d.nom_zone = e.nom_zone
+            LEFT JOIN attente a ON d.date = a.date AND d.nom_zone = a.nom_zone
+            ORDER BY d.date, d.nom_zone;`}</code>
+                  </pre>
+                </div>
+
+                <div className="skills">
+                  <span>Python</span>
+                  <span>ML</span>
+                  <span>AWS Quicksight</span>
+                  <span>AWS Athena</span>
+                  <span>AWS SageMaker</span>
+                  <span>AWS S3</span>
+                  <span>SQL</span>
+                  <span>JupyterLab</span>
                 </div>
               </div>
+            </div>
 
               <div className="timeline-item">
                 <div className="timeline-content">
